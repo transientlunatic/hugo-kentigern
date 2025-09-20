@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+<header class="post-header post-header-no-image">
+  <h1 class="display-1">
+    {{ .Title }}
+  </h1>
+</header>
+
+
+{{ .Content }}
+<div class="container justify-content-md-center">
+  {{ range site.RegularPages }}
+  <div class="row justify-content-md-center">
+    <div class="col-lg-6">
+      <div class="mt-3 mb-3">
+	{{ partial "content/card.html" . }}
+      </div>
+    </div>
+  </div>
+  {{ end }}
+</div>  
+  {{ end }}

@@ -1,0 +1,38 @@
+{{ define "main" }}
+
+<div class="container-fluid">
+  <div class="row mt-5 justify-content-md-center">
+    <div class="col-sm-12 col-md-9 col-xl-6 mb-5">
+
+
+      <header class="post-header post-header-no-image">
+	<h1 class="display-1">
+	  {{ .Title }}
+	</h1>
+	<h4 class="display-4">
+	  {{ .Params.subtitle }}
+	</h4>
+
+	<span class="meta">
+	  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+	  {{ $dateHuman := .Date | time.Format ":date_long" }}
+	  <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+	</span>
+      </header>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row mt-5 justify-content-md-center">
+    <div class="col-sm-12 col-md-9 col-xl-6 mb-5">
+      <article class="post-content clearfix text-dark">
+	{{ .Content }}
+      </article>
+    </div>
+  </div>
+</div>
+
+  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+{{ end }}

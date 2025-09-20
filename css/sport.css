@@ -1,0 +1,196 @@
+
+#circle circle { fill: none; pointer-events: all; }
+circle.att{ fill:red; }
+circle.def{ fill:green; }
+.formbox{
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 2px;
+}
+.formbox-win{
+    background-color: #7FFF00;
+}
+.formbox-loss{
+    background-color: #c41313;
+}
+.formbox-draw{
+    background-color: #ffdd02;
+}
+.formbox-win-pred{
+    background-color: #7FFF00;
+    opacity: 0.5;
+}
+.formbox-loss-pred{
+    background-color: #c41313;
+    opacity: 0.5;
+}
+.formbox-draw-pred{
+    background-color: #ffdd02;
+    opacity: 0.5;
+}
+
+.leaddesc{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.datetime, .pool {
+    font-family: monospace;
+    font-size: 6pt;
+}
+.pool {
+    float: left;
+    margin-top: -10px;
+}
+
+.brand{
+    font-family: "Open Sans", sans-serif;
+    font-size: 14pt;
+    weight: normal;
+}
+
+select{
+    border: none;
+    font-family: monospace, "Open Sans", sans-serif;
+    font-size: 10pt;
+    background: white;
+    padding: 5px;
+}
+.chance{
+    font-size: 10pt;
+    margin-bottom: -7px;
+    text-align: center;
+}
+.weekbtn{
+    fill: #CCC;
+    cursor: pointer;
+}
+.weekbtn-label{
+    cursor: pointer;
+    font-size: small;
+    font-family: "Nova Mono", monospace;
+}
+.weekbtn-current>circle{
+    fill: red;
+}
+.teamname{
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+}
+.attack, .defence, .teamname{
+    border-bottom: 1px solid #DDDDDD;
+    padding: 5px;
+}
+.rankhead{
+    font-family: "Nova Mono", monospace;
+    font-size: 8pt;
+}
+.wins, .losses, .draws, .lpoints, .pointsbal, .bonus, .played, .top4, .ranking, .attack, .defence{
+    font-family: "Nova Mono", monospace;
+}
+.logosmall{
+    margin-right: 10px;
+    width: 30px;
+}
+.logo{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.domain{
+    fill: transparent;
+}
+.xaxis{
+    font-size: 8pt;
+    opacity: 0.3;
+}
+.scorecell{
+    width: 20px;
+    height: 20px;
+}
+.gamebox {
+    width: 100px;
+    float: left;
+    margin: 5px;
+}
+
+.team{
+    padding: 5px;
+    background: #333333;
+    width: 100%;
+    color: white;
+}
+.winprob{
+    text-align: center;
+}
+.warning{
+    margin: 5px;
+}
+.score{
+    margin-bottom: 1px;
+    text-align: center;
+    top: 30px;
+    font-size: 20pt;
+}
+.hist{
+    height: 25px;
+    margin-bottom: -6px;
+}
+#predictions{
+    font-family: "Open Sans", sans-serif;
+}
+#dateslist{
+    float: left;
+    margin-top: 2px;
+    margin-left: 10px;
+    width: 90%;
+    height: 20px;
+}
+.group path {
+    fill-opacity: .5;
+}
+path.chord {
+    stroke: #000;
+    stroke-width: .25px;
+}
+#circle:hover path.fade {
+    display: none;
+}
+#panel {
+    width: 45%;
+    float: right;
+}
+
+#navbarthing{
+    margin-left: -30px;
+    z-index: 99;
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    border-bottom: 1px solid #EEEEEE;
+}
+#navbarthing.affix{
+    top: 0px;
+}
+.weekrow{
+    background: #EEEEEE;
+    border: 1px solid #DDDDDD;
+}
+
+.axis{
+    font-size: 50%;
+}
+
+.gamehist>svg{
+    width: 100px;
+    height: 25px;
+    margin-bottom: -6px;
+    margin-top: 6px;
+}
+.path.domain{
+    display: none;
+}
+svg{
+    width: 100px;
+    height: 30px;
+}

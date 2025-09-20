@@ -1,0 +1,16 @@
+{{ $data := dict }}
+{{ $path := "data/links.yaml" }}
+
+{{ with resources.Get $path }}
+  {{ with . | transform.Unmarshal }}
+{{ $data = . }}
+{{ range $data }}
+<p>
+  <i class="fa-brands fa-{{.site}} fa-1x" aria-hidden="true"></i>
+  <a href="{{.url}}" rel="me">{{.label}}</a>
+</p>
+{{ end }}
+  {{ end }}
+{{ else }}
+{{ end }}
+
