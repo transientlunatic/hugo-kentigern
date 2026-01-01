@@ -7,11 +7,9 @@
   "description": "This is the webpack component of the kentigern theme.",
   "main": "index.js",
   "scripts": {
-    "develop": "bundle exec jekyll clean && run-p develop:{webpack,jekyll}",
-    "develop:jekyll": "sleep 5 && bundle exec jekyll serve --watch --future",
+    "develop": "run-p develop:{webpack}",
     "develop:webpack": "webpack --mode development --watch",
-    "build": "run-s build:webpack build:jekyll",
-    "build:jekyll": "JEKYLL_ENV=production bundle exec jekyll build || JEKYLL_ENV=production jekyll build",
+    "build": "run-s build:webpack",
     "build:webpack": "webpack --mode production"
   },
   "author": "Daniel Williams",
