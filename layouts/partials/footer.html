@@ -1,12 +1,22 @@
 <div class="container">
-  <div class="row">
-    <div class="col-md-6">
+  <div class="row mt-3">
+    <div class="col-md-6 col-lg-4">
+      <h4 class="display-6">Find me elsewhere</h4>
       {{ partial "links.html" . }}
     </div>
 
-    <div class="col-md-6">
+    <div class="col-md-6 col-lg-4">
+      <h4 class="display-6">On this website</h4>
+	{{ range site.Sections.ByWeight }}
+	<p><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></p>
+	{{ end }}
+    </div>
 
-      <p>Copyright {{ now.Year }}. All rights reserved.</p>
+  </div>
+  <div class="row mt-3 mb -3">  
+    <div class="col-md-12 col-lg-12">
+
+      <p>Copyright 2008-{{ now.Year }}. All rights reserved.</p>
     </div>
   </div>
 </div>

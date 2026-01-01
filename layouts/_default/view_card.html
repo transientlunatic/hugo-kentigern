@@ -1,0 +1,13 @@
+<div class="card card-content bg-light">
+  {{ $img := .Params.image }}
+  {{ with or (.Resources.GetMatch $img) (.Resources.GetMatch (path.Base $img)) }}
+  <img src="{{ .RelPermalink }}" class="card-img-top">
+  {{ end }}
+  <div class="card-body">
+    <h5><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h5>
+    {{ if .Params.subtitle }}
+    <h6 class="card-subtitle mb-2 text-muted">{{ .Params.subtitle }}</h6>
+    {{ end }}
+    {{ .Summary }}
+  </div>
+</div>
