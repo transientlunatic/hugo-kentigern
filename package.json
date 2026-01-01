@@ -1,6 +1,9 @@
 {
-  "name": "jekyll-kentigern",
+  "name": "@transientlunatic/jekyll-kentigern",
   "version": "0.0.1",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "description": "This is the webpack component of the kentigern theme.",
   "main": "index.js",
   "scripts": {
