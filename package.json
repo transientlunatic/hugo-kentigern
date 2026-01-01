@@ -11,7 +11,7 @@
     "develop:jekyll": "sleep 5 && bundle exec jekyll serve --watch --future",
     "develop:webpack": "webpack --mode development --watch",
     "build": "run-s build:webpack build:jekyll",
-    "build:jekyll": "JEKYLL_ENV=production bundle exec jekyll build",
+    "build:jekyll": "JEKYLL_ENV=production bundle exec jekyll build || JEKYLL_ENV=production jekyll build",
     "build:webpack": "webpack --mode production"
   },
   "author": "Daniel Williams",

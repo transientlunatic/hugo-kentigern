@@ -39,6 +39,22 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Setup Ruby and Bundler
+        if: runner.os == 'Linux'
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Ensure Bundler dependencies
+        run: |
+          if ! command -v bundle >/dev/null 2>&1; then
+            gem install bundler
+          fi
+          if [ -f Gemfile ]; then
+            bundle install --jobs 4 --retry 3
+          fi
+
       - name: Build
         run: npm run build
 
