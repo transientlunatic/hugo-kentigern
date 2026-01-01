@@ -3,9 +3,9 @@ const path = require('path');
 
 // https://webpack.js.org/configuration/
 module.exports = {
-    entry: {
-	main: path.join(__dirname, '_webpack', 'main'),
-    },
+	entry: {
+	main: path.join(__dirname, '_webpack', 'main.js'),
+	},
     output: {
 	path: path.resolve(__dirname, 'static', 'js'),
 	filename: '[name]-bundle.js',
